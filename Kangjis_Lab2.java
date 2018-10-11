@@ -9,6 +9,7 @@
 import java.util.Scanner;
 
 public class Kangjis_Lab2 {
+
      public static void main(String[] args) {
 
           // create a scanner for user keyboard input
@@ -18,18 +19,18 @@ public class Kangjis_Lab2 {
           System.out.println("Reading Point P: ");
 
           // get the point P values from user
-          System.out.println("Enter X-Value: ");
+          System.out.print("Enter X-Value: ");
           double valuePX1 = in.nextDouble();
-          System.out.println("Enter Y-Value: ");
+          System.out.print("Enter Y-Value: ");
           double valuePY1 = in.nextDouble();
 
           // print out Reading Point Q
           System.out.println("Reading Point Q: ");
 
           // get the point Q values from user
-          System.out.println("Enter X-Value: ");
+          System.out.print("Enter X-Value: ");
           double valueQX2 = in.nextDouble();
-          System.out.println("Enter Y-Value: ");
+          System.out.print("Enter Y-Value: ");
           double valueQY2 = in.nextDouble();
 
           // calculate the length of slope
@@ -43,9 +44,10 @@ public class Kangjis_Lab2 {
           double distance = Math.sqrt(Math.pow(valueQX2 - valuePX1, 2) + Math.pow(valueQY2 - valuePY1, 2));
 
           // display the slope, mid-point, distance
-          System.out.println("A Line connected by P(" + valuePX1 + ", " + valuePY1 + ") and Q(" + valueQX2 + ", " + valueQY2 + ")");
+          System.out.printf("A Line connected by P(%.1f, %.1f) and ", valuePX1, valuePY1);
+          System.out.printf("Q(%.1f, %.1f)\n", valueQX2, valueQY2);
           System.out.printf("- Has a slope of %4.2f\n", slope);
-          System.out.printf("- Has a mid-point of (%3.1f, %3.1f)\n", midpoint1, midpoint2);
+          System.out.printf("- Has a mid-point of (%.1f, %.1f)\n", midpoint1, midpoint2);
           System.out.printf("The distance between P and Q is %4.2f\n", distance);
      }
 }
